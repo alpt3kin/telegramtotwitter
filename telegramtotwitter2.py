@@ -6,12 +6,12 @@ from datetime import datetime, timedelta
 from pytz import timezone
 
 # Twitter ve Telegram API anahtarlarını buraya yerleştirin
-consumer_key = "JAireK4gNsgiR1kyHthv96sYd"
-consumer_secret = "m0Pva7gVg4vTuMWQTkjDRdBOzVg8aH1WhJ2SrQGmB6DciY8qoA"
-bearer_token = r"AAAAAAAAAAAAAAAAAAAAADn3ogEAAAAAxhSkKXxcKhFW4jqjT53ym4qgOos%3Dg5TmkazF0dZMSFVz4ts1xbWDU1L06yhq7iOztZwfzCPnvTFP35"
-access_token = "1577251423259136000-2eHWx2gnJQd4UP4O4dIARjnFG185uz"
-access_token_secret = "Q1y449CFLVv9yIJyrkH9ZnxDF4axCNOfcVq8AzdONrMOh"
-telegram_token = "5608594295:AAE0Fb8NHLl6eCAnK0HX7fTdThM7xq33r2k"
+consumer_key = "Twitter API Key"
+consumer_secret = "Twıtter API Secret"
+bearer_token = r"Twitter Bearer Token"
+access_token = "Twitter Access Token"
+access_token_secret = "Twitter Access Token Secret"
+telegram_token = "Telegram Bot Token"
 
 # Twitter API Bağlantısı
 client = tweepy.Client(bearer_token, consumer_key, consumer_secret, access_token, access_token_secret)
@@ -43,7 +43,7 @@ def handle_message(message):
     photo_url = f"https://api.telegram.org/file/bot{telegram_token}/{file_info.file_path}"
     response = requests.get(photo_url)
 
-    # Fotoğrafı kaydet ve dosya adına tarih ve saat damgası ekleyin
+    # Fotoğrafı kaydet ve dosya adına tarih ve saat damgası ekle
     now = datetime.now(timezone)
     timestamp = now.strftime("%d%m%Y_%H%M")
     media_path = f"{media_folder}/{timestamp}.jpg"
@@ -51,7 +51,7 @@ def handle_message(message):
         f.write(response.content)
 
     # Fotoğraftan mesajın text bilgisini al
-    text = message.caption if message.caption else "#art #artificialart #artwork #yapayzeka #yapaysanat #ai #artist #wallpaper #artificialintelligence"
+    text = message.caption if message.caption else "EĞER FOTOĞRAF AÇIKLAMASI YOKSA BURAYA YAZDIĞIN ŞEYİ PAYLAŞACAK"
 
     # Medya yükleme
     media = api.media_upload(media_path)
