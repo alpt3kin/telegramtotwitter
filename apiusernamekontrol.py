@@ -1,9 +1,10 @@
 import tweepy
 
-consumer_key = "JAireK4gNsgiR1kyHthv96sYd"
-consumer_secret = "m0Pva7gVg4vTuMWQTkjDRdBOzVg8aH1WhJ2SrQGmB6DciY8qoA"
-access_token = "1577251423259136000-2eHWx2gnJQd4UP4O4dIARjnFG185uz"
-access_token_secret = "Q1y449CFLVv9yIJyrkH9ZnxDF4axCNOfcVq8AzdONrMOh"
+##İLGİLİ BÖLÜMLERİ DOLDURDUĞUNDA TWITTER API'NIN BAĞLI OLDUĞU TWITTER KULLANICI ADINI EKRANA YAZDIRIR. KONTROL AMAÇLI KULLANIM İÇİNDİR.
+consumer_key = "Twitter API Key"
+consumer_secret = "Twıtter API Secret"
+access_token = "Twitter Access Token"
+access_token_secret = "Twitter Access Token Secret"
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
