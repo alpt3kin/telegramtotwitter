@@ -9,6 +9,7 @@
 - This code using Python tweepy and telebot library
 - Open Telegram, and the messenger will take you to the BotFather account. It creates bots and provides tokens.
 - Enter the Twitter (X) API and bot token information in the relevant fields.
+- Try typing anything into the Telegram bot you created. You will see that it shares it on Twitter.
 
 
 # That's All.
